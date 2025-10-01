@@ -9,4 +9,4 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar utr-voy.jar
 EXPOSE 7777
-ENTRYPOINT ["java", "-Dspring.profile.active=prod","-jar","utr-voy.jar"]
+ENTRYPOINT ["java", "-Dspring.profiles.active=prod","-jar","utr-voy.jar"]
