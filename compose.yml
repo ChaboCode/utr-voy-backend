@@ -3,6 +3,8 @@ services:
     build:
       context: .
     restart: unless-stopped
+    depends_on:
+      - postgres
     ports:
       - "7777:7777"
 
