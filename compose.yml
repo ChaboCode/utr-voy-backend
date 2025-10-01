@@ -1,4 +1,11 @@
 services:
+  spring:
+    build:
+      context: .
+    restart: unless-stopped
+    ports:
+      - "7777:7777"
+
   postgres:
     image: 'postgres:latest'
     restart: unless-stopped
